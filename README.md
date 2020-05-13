@@ -1,6 +1,6 @@
 ## Laboratory work V
 
-<a href="https://yandex.ru/efir/?stream_id=vQw_LH0UfN6I"><img src="https://raw.githubusercontent.com/tp-labs/lab05/master/preview.png" width="640"/></a>
+<a href="https://yandex.ru/efir/?stream_id=vQw_LH0UfN6I"><img src="https://raw.githubusercontent.com/tp-labs/lab06/master/preview.png" width="640"/></a>
 
 Данная лабораторная работа посвещена изучению фреймворков для тестирования на примере **GTest**
 
@@ -10,14 +10,14 @@ $ open https://github.com/google/googletest
 
 ## Tasks
 
-- [x] 1. Создать публичный репозиторий с названием **lab05** на сервисе **GitHub**
+- [x] 1. Создать публичный репозиторий с названием **lab06** на сервисе **GitHub**
 - [x] 2. Выполнить инструкцию учебного материала
 - [x] 3. Ознакомиться со ссылками учебного материала
 - [x] 4. Составить отчет и отправить ссылку личным сообщением в **Slack**
 
 ## Tutorial
-$ git clone https://github.com/scorpy2013/lab05.git
-Cloning into 'lab05'...
+$ git clone https://github.com/scorpy2013/lab06.git
+Cloning into 'lab06'...
 remote: Enumerating objects: 134, done.
 remote: Counting objects: 100% (134/134), done.
 remote: Compressing objects: 100% (72/72), done.
@@ -33,28 +33,28 @@ $ alias gsed=sed # for *-nix system
 ```sh
 $ cd ${GITHUB_USERNAME}/workspace
 $ pushd .
-~/Documents/GitHub/scorpy2013/lab05 ~/Documents/GitHub/scorpy2013/lab05
+~/Documents/GitHub/scorpy2013/lab06 ~/Documents/GitHub/scorpy2013/lab06
 $ source scripts/activate
 ```
 
 ```sh
-$ git clone https://github.com/${GITHUB_USERNAME}/lab04 projects/lab05
-Cloning into 'projects/lab05'...
+$ git clone https://github.com/${GITHUB_USERNAME}/lab04 projects/lab06
+Cloning into 'projects/lab06'...
 remote: Enumerating objects: 93, done.
 remote: Counting objects: 100% (93/93), done.
 remote: Compressing objects: 100% (67/67), done.
 remote: Total 93 (delta 29), reused 80 (delta 25), pack-reused 0
 Receiving objects: 100% (93/93), 2.11 MiB | 2.53 MiB/s, done.
 Resolving deltas: 100% (29/29), done.
-$ cd projects/lab05
+$ cd projects/lab06
 $ git remote remove origin
-$ git remote add origin https://github.com/${GITHUB_USERNAME}/lab05
+$ git remote add origin https://github.com/${GITHUB_USERNAME}/lab06
 ```
 
 ```sh
 $ mkdir third-party
 $ git submodule add https://github.com/google/googletest third-party/gtest
-Cloning into 'C:/Users/User/Documents/GitHub/scorpy2013/lab05/projects/lab05/third-party/gtest'...
+Cloning into 'C:/Users/User/Documents/GitHub/scorpy2013/lab06/projects/lab06/third-party/gtest'...
 remote: Enumerating objects: 20286, done.
 remote: Total 20286 (delta 0), reused 0 (delta 0), pack-reused 20286
 Receiving objects: 100% (20286/20286), 7.47 MiB | 2.84 MiB/s, done.
@@ -159,7 +159,7 @@ $ cmake -H. -B_build -DBUILD_TESTS=ON
 -- Found Threads: TRUE  
 -- Configuring done
 -- Generating done
--- Build files have been written to:/Documents/GitHub/scorpy2013/lab05/projects/lab05/_build 
+-- Build files have been written to:/Documents/GitHub/scorpy2013/lab06/projects/lab06/_build 
 $ cmake --build _build
 Scanning dependencies of target gtest
 [  8%] Building CXX object third-party/gtest/googlemock/gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o
@@ -187,7 +187,7 @@ Scanning dependencies of target gmock_main
 [100%] Built target gmock_main
 $ cmake --build _build --target test
 Running tests...
-Test project /Documents/GitHub/scorpy2013/lab05/projects/lab05/_build 
+Test project /Documents/GitHub/scorpy2013/lab06/projects/lab06/_build 
     Start 1: check
 1/1 Test #1: check ............................   Passed    0.00 sec
 
@@ -198,7 +198,7 @@ Total Test time (real) =   0.00 sec
 
 ```sh
 $ _build/check
-Running main() from /Documents/GitHub/scorpy2013/lab05/projects/lab05/third-party/gtest/googletest/src/gtest_main.cc
+Running main() from /Documents/GitHub/scorpy2013/lab06/projects/lab06/third-party/gtest/googletest/src/gtest_main.cc
 [==========] Running 1 test from 1 test case.
 [----------] Global test environment set-up.
 [----------] 1 test from Print
@@ -212,9 +212,9 @@ Running main() from /Documents/GitHub/scorpy2013/lab05/projects/lab05/third-part
 $ cmake --build _build --target test -- ARGS=--verbose
 
 Running tests...
-UpdateCTestConfiguration  from :/Documents/GitHub/scorpy2013/workspace/projects/lab05/_build/DartConfiguration.tcl
-UpdateCTestConfiguration  from :/Documents/GitHub/scorpy2013/workspace/projects/lab05/_build/DartConfiguration.tcl
-Test project /Documents/GitHub/scorpy2013/workspace/projects/lab05/_build
+UpdateCTestConfiguration  from :/Documents/GitHub/scorpy2013/workspace/projects/lab06/_build/DartConfiguration.tcl
+UpdateCTestConfiguration  from :/Documents/GitHub/scorpy2013/workspace/projects/lab06/_build/DartConfiguration.tcl
+Test project /Documents/GitHub/scorpy2013/workspace/projects/lab06/_build
 Constructing a list of tests
 Done constructing a list of tests
 Updating test list for fixtures
@@ -224,9 +224,9 @@ Checking test dependency graph end
 test 1
     Start 1: check
 
-1: Test command: /Documents/GitHub/scorpy2013/workspace/projects/lab05/_build/check
+1: Test command: /Documents/GitHub/scorpy2013/workspace/projects/lab06/_build/check
 1: Test timeout computed to be: 10000000
-1: Running main() from /Documents/GitHub/scorpy2013/workspace/projects/lab05/third-party/gtest/googletest/src/gtest_main.cc
+1: Running main() from /Documents/GitHub/scorpy2013/workspace/projects/lab06/third-party/gtest/googletest/src/gtest_main.cc
 1: [==========] Running 1 test from 1 test case.
 1: [----------] Global test environment set-up.
 1: [----------] 1 test from Print
@@ -245,7 +245,7 @@ Total Test time (real) =   0.00 sec
 ```
 
 ```sh
-$ gsed -i 's/lab04/lab05/g' README.md
+$ gsed -i 's/lab04/lab06/g' README.md
 $ gsed -i 's/\(DCMAKE_INSTALL_PREFIX=_install\)/\1 -DBUILD_TESTS=ON/' .travis.yml
 $ gsed -i '/cmake --build _build --target install/a\
 - cmake --build _build --target test -- ARGS=--verbose
@@ -303,7 +303,7 @@ Password for 'https://scorpy2013@github.com':
 Запись объектов: 100% (40/40), 11.83 KiB | 1.48 MiB/s, готово.
 Всего 40 (изменения 11), повторно использовано 0 (изменения 0)
 remote: Resolving deltas: 100% (11/11), done.
-To https://github.com/scorpy2013/lab05
+To https://github.com/scorpy2013/lab06
  * [new branch]      master -> master
 $ git commit -m"added tests"
 On branch master
@@ -343,15 +343,15 @@ Username: scorpy2013
 Password for scorpy2013: *********************
 Successfully logged in as scorpy2013!
 $ travis enable
-Detected repository as scorpy2013/lab05, is this correct? |yes| y
-scorpy2013/lab05: enabled :)
+Detected repository as scorpy2013/lab06, is this correct? |yes| y
+scorpy2013/lab06: enabled :)
 ```
 
 ```sh
 $ mkdir artifacts
 $ sleep 20s && gnome-screenshot --file artifacts/screenshot.png
 # for macOS: $ screencapture -T 20 artifacts/screenshot.png
-# open https://github.com/${GITHUB_USERNAME}/lab05
+# open https://github.com/${GITHUB_USERNAME}/lab06
 ```
 
 ## Report
@@ -360,7 +360,7 @@ $ sleep 20s && gnome-screenshot --file artifacts/screenshot.png
 $ popd
 $ export LAB_NUMBER=05
 $ git clone https://github.com/tp-labs/lab${LAB_NUMBER} tasks/lab${LAB_NUMBER}
-Cloning into 'tasks/lab05'...
+Cloning into 'tasks/lab06'...
 remote: Enumerating objects: 15, done.
 remote: Counting objects: 100% (15/15), done.
 remote: Compressing objects: 100% (14/14), done.
